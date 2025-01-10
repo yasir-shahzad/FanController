@@ -3,24 +3,17 @@
 
 #include <Arduino.h>
 
-class FanController {
-public:
-    FanController(int fanPin, int zeroCrossingPin);
-    void begin();
-    void setSpeed(int speed); // Speed in percentage (0-100)
-
-private:
-    int _fanPin;
-    int _zeroCrossingPin;
-    volatile int _delayTime;
-    hw_timer_t *_timer;
-
-    static void IRAM_ATTR zeroCrossingInterruptWrapper();
-    static void IRAM_ATTR fireTriacWrapper();
-    void IRAM_ATTR zeroCrossingInterrupt();
-    void IRAM_ATTR fireTriac();
-
-    static FanController *_instance; // Singleton instance for static ISR access
-};
+#if defined(ESP32)
+    #include "FanControllerESP32.h"
+    typedef FanControllerESP32 FanController;
+#elif defined(ESP8266)
+    #include "FanControllerESP8266.h"
+    typedef FanControllerESP8266 FanController;
+#elif defined(__AVR__)
+    #include "FanControllerAVR.h"
+    typedef FanControllerAVR FanController;
+#else
+    #error "Unsupported board. This library supports ESP32, ESP8266, and AVR (Arduino Uno)."
+#endif
 
 #endif // FANCONTROLLER_H

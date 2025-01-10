@@ -1,13 +1,14 @@
-# FanController Library for ESP32
+# FanController Library for ESP32, ESP8266, and Arduino Uno
 
 ## Description
-A lightweight Arduino library for ESP32 to control AC fan speed using zero-crossing detection and TRIAC firing with precise timing.
+A lightweight Arduino library to control AC fan speed using zero-crossing detection and TRIAC firing with precise timing. Compatible with ESP32, ESP8266, and Arduino Uno.
 
 ---
 
 ## Features
 - Zero-crossing detection for synchronized TRIAC control.
 - Hardware timer-based delay management for precise timing.
+- Board compatibility: ESP32, ESP8266, and Arduino Uno.
 - Easy-to-use interface for setting fan speed (0-100%).
 
 ---
