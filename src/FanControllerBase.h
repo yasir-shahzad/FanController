@@ -3,10 +3,10 @@
 
 #include <Arduino.h>
 
-class FanControllerBase {
+class FanController {
 public:
-    FanControllerBase(int fanPin, int zeroCrossingPin);
-    virtual ~FanControllerBase() = default;
+    FanController(int fanPin, int zeroCrossingPin);
+    virtual ~FanController() = default;
 
     void begin();
     void setSpeed(int speed); // Speed in percentage (0-100)

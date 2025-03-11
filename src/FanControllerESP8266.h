@@ -3,10 +3,10 @@
 
 #include "FanControllerBase.h"
 
-class FanControllerESP8266 : public FanControllerBase {
+class FanControllerESP8266 : public FanController {
 public:
     FanControllerESP8266(int fanPin, int zeroCrossingPin)
-        : FanControllerBase(fanPin, zeroCrossingPin) {}
+        : FanController(fanPin, zeroCrossingPin) {}
 
 protected:
     void platformBegin() override {

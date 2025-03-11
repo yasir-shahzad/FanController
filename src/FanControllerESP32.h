@@ -1,12 +1,12 @@
 #ifndef FANCONTROLLERESP32_H
 #define FANCONTROLLERESP32_H
 
-#include "FanControllerBase.h"
+#include "FanController.h"
 
-class FanControllerESP32 : public FanControllerBase {
+class FanControllerESP32 : public FanController {
 public:
     FanControllerESP32(int fanPin, int zeroCrossingPin)
-        : FanControllerBase(fanPin, zeroCrossingPin), _timer(nullptr) {}
+        : FanController(fanPin, zeroCrossingPin), _timer(nullptr) {}
 
 protected:
     void platformBegin() override {

@@ -3,10 +3,10 @@
 
 #include "FanControllerBase.h"
 
-class FanControllerAVR : public FanControllerBase {
+class FanControllerAVR : public FanController {
 public:
     FanControllerAVR(int fanPin, int zeroCrossingPin)
-        : FanControllerBase(fanPin, zeroCrossingPin) {}
+        : FanController(fanPin, zeroCrossingPin) {}
 
 protected:
     void platformBegin() override {
