@@ -4,22 +4,18 @@
 
 A lightweight Arduino library to control AC fan speed using zero-crossing detection and TRIAC firing with precise timing. Compatible with ESP32, ESP8266, and Arduino Uno.
 
----
 
-## Features
-- Zero-crossing detection for synchronized TRIAC control.
-- Hardware timer-based delay management for precise timing.
-- Board compatibility: ESP32, ESP8266, and Arduino Uno.
-- Easy-to-use interface for setting fan speed (0-100%).
-
----
+## 🌟 Features
+- 🔄 Zero-crossing detection for synchronized TRIAC control.
+- ⏱️ Hardware timer-based delay management for precise timing.
+- 🛠️ Board compatibility: ESP32, ESP8266, and Arduino Uno.
+- 🎚️ Easy-to-use interface for setting fan speed (0-100%).
 
 ## Installation
 1. Clone or download the repository.
 2. Place the `FanController` folder in your Arduino `libraries` directory.
 3. Restart your Arduino IDE to recognize the library.
 
----
 
 
 # Pin Mapping for Various Boards
