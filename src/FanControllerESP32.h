@@ -8,25 +8,39 @@ public:
     FanControllerESP32(int fanPin, int zeroCrossingPin)
         : FanControllerBase(fanPin, zeroCrossingPin), _timer(nullptr) {}
 
-protected:
-    void platformBegin() override {
-        attachInterrupt(digitalPinToInterrupt(_zeroCrossingPin), fireTriac, RISING);
-        _timer = timerBegin(0, 80, true); // Timer 0, prescaler 80 (1 µs per tick)
-        timerAttachInterrupt(_timer, fireTriac, true);
+    void begin() override {
+        _fanPinStatic = _fanPin; // Assign pin to static variable
+        pinMode(_fanPin, OUTPUT);
+        attachInterrupt(digitalPinToInterrupt(_zeroCrossingPin), fireTriacISR, RISING);
+
+        _timer = timerBegin(0, 80, true);
+        timerAttachInterrupt(_timer, timerISR, true);  // ✅ No '&' and matches function signature
     }
 
     void platformSetSpeed(int delayTime) override {
-        timerAlarmWrite(_timer, delayTime, false); // Set delay time
+        timerAlarmWrite(_timer, delayTime, false);
         timerAlarmEnable(_timer);
     }
 
 private:
     hw_timer_t *_timer;
-    static void IRAM_ATTR fireTriac() {
-        digitalWrite(_fanPin, HIGH);
-        delayMicroseconds(10);
-        digitalWrite(_fanPin, LOW);
+    static int _fanPinStatic;
+
+    // Correct ISR function for Zero Crossing Detection
+    static void IRAM_ATTR fireTriacISR() {
+        digitalWrite(_fanPinStatic, HIGH);  // ✅ Ensure this runs from IRAM
+        delayMicroseconds(10);              // ✅ Keep short; consider replacing with NOP
+        digitalWrite(_fanPinStatic, LOW);
+    }
+    
+
+    // Correct ISR function for Timer Interrupt
+    static void IRAM_ATTR timerISR() {  // ✅ Fixed function signature
+        fireTriacISR();
     }
 };
+
+// Define static variable
+int FanControllerESP32::_fanPinStatic = 0;
 
 #endif // FANCONTROLLERESP32_H
