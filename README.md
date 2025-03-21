@@ -1,6 +1,6 @@
 # FanController Library for ESP32, ESP8266, and Arduino Uno
 [![Discord](https://img.shields.io/discord/1349656889981407283?style=social&logo=discord&label=COMMUNITY)](https://discord.gg/GZ8PyxDu)
-
+[![Ko-fi](https://img.shields.io/badge/Support%20on%20Ko--fi-F16061?style=flat&logo=kofi&logoColor=white&labelColor=%23FF5E5B)](https://ko-fi.com/yasirshahzad)
 ## Description
 A lightweight Arduino library to control AC fan speed using zero-crossing detection and TRIAC firing with precise timing. Compatible with ESP32, ESP8266, and Arduino Uno.
 
