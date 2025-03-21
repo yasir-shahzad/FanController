@@ -5,13 +5,13 @@
 
 #if defined(ESP32)
     #include "FanControllerESP32.h"
-    typedef FanControllerESP32 FanController;
+    using FanController = FanControllerESP32;
 #elif defined(ESP8266)
     #include "FanControllerESP8266.h"
-    typedef FanControllerESP8266 FanController;
+    using FanController = FanControllerESP8266;
 #elif defined(__AVR__)
     #include "FanControllerAVR.h"
-    typedef FanControllerAVR FanController;
+    using FanController = FanControllerAVR;
 #else
     #error "Unsupported board. This library supports ESP32, ESP8266, and AVR (Arduino Uno)."
 #endif
