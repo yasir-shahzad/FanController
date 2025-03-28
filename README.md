@@ -14,7 +14,16 @@ A lightweight Arduino library to control AC fan speed using zero-crossing detect
 ## Installation
 1. Clone or download the repository.
 2. Place the `FanController` folder in your Arduino `libraries` directory.
-3. Restart your Arduino IDE to recognize the library..
+3. Restart your Arduino IDE to recognize the library.
+
+## Compatibility
+
+MCU                | Work Well    | Work Wrong   | Untested    | Remarks
+------------------ | :----------: | :----------: | :---------: | -----
+Arduino uno        |      √       |              |             | 
+Mega2560           |      √       |              |             | 
+Leonardo           |      √       |              |             | 
+
 
 
 
