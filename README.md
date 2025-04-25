@@ -131,5 +131,5 @@ Contributions are welcome! Feel free to open issues or submit pull requests.
 ---
 
 ## Author
-[Your Name]  
-[Your Contact Information]
+[Yasir Shahzad]  
+[Yasirshahzad918@gmail.com](mailto:Yasirshahzad918@gmail.com)
