@@ -20,7 +20,7 @@ A lightweight Arduino library to control AC fan speed using zero-crossing detect
 
 MCU                | Work Well    | Work Wrong   | Untested    | Remarks
 ------------------ | :----------: | :----------: | :---------: | -----
-Arduino uno        |      √       |              |             | 
+Arduino uno        |      √       |              |             |  ✗  
 Mega2560           |      √       |              |             | 
 Leonardo           |      √       |              |             | 
 
