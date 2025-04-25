@@ -24,20 +24,20 @@ The following table provides the pin mapping for different microcontroller board
 
 ## Pin Mapping Table
 
-| **Board**         | **INPUT Pin (Zero Cross)**       | **OUTPUT Pin**                        |
-|--------------------|----------------------------------|----------------------------------------|
-| **Leonardo**       | D7 (NOT CHANGABLE)              | D0-D6, D8-D13                          |
-| **Mega**           | D2 (NOT CHANGABLE)              | D0-D1, D3-D70                          |
-| **UNO / NANO**     | D2 (NOT CHANGABLE)              | D0-D1, D3-D20                          |
-| **ESP8266**        | - D1 (IO5)                     | - D0 (IO16)                            |
-|                    | - D5 (IO14)                    | - D2 (IO4)                             |
-|                    | - D7 (IO13)                    | - D6 (IO12)                            |
-|                    |                                 | - D8 (IO15)                            |
-| **ESP32**          | - GPIO36, GPIO39, GPIO32, GPIO25 | - GPIO34, GPIO35, GPIO33, GPIO26      |
-|                    | - GPIO27, GPIO12, GPIO7, GPIO2  | - GPIO14, GPIO13, GPIO15, GPIO0       |
-|                    | - GPIO4, GPIO17, GPIO18, GPIO21 | - GPIO16, GPIO5, GPIO19, GPIO23       |
-| **Arduino M0 / Zero** | D7 (NOT CHANGABLE)             | D0-D6, D8-D13                          |
-| **Arduino Due**    | D0-D53                         | D0-D53                                 |
+| **Board**          | **INPUT Pin (Zero Cross)**       | **OUTPUT Pin**                        |
+|------------------- |----------------------------------|----------------------------------------|
+| **Leonardo**       | D7 (NOT CHANGABLE)               | D0-D6, D8-D13                          |
+| **Mega**           | D2 (NOT CHANGABLE)               | D0-D1, D3-D70                          |
+| **UNO / NANO**     | D2 (NOT CHANGABLE)               | D0-D1, D3-D20                          |
+| **ESP8266**        | - D1 (IO5)                       | - D0 (IO16)                            |
+|                    | - D5 (IO14)                      | - D2 (IO4)                             |
+|                    | - D7 (IO13)                      | - D6 (IO12)                            |
+|                    |                                  | - D8 (IO15)                            |
+| **ESP32**          | - GPIO36, GPIO39, GPIO32, GPIO25 | - GPIO34, GPIO35, GPIO33, GPIO26       |
+|                    | - GPIO27, GPIO12, GPIO7, GPIO2   | - GPIO14, GPIO13, GPIO15, GPIO0        |
+|                    | - GPIO4, GPIO17, GPIO18, GPIO21  | - GPIO16, GPIO5, GPIO19, GPIO23        | 
+| **Arduino M0 / Zero** | D7 (NOT CHANGABLE)            | D0-D6, D8-D13                          |
+| **Arduino Due**    | D0-D53                           | D0-D53                                 |
 | **STM32 (Black Pill / Blue Pill, etc.)** | PA0-PA15, PB0-PB15, PC13-PC15 | PA0-PA15, PB0-PB15, PC13-PC15 |
 
 ## Notes for Specific Boards

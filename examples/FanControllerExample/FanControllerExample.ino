@@ -17,7 +17,7 @@ void loop() {
     if (Serial.available() > 0) {
         int speed = Serial.parseInt();
         if (speed >= 0 && speed <= 100) {
-            fan.setSpeed(speed);
+           // fan.setSpeed(speed);
             Serial.println("Fan speed set to: " + String(speed) + "%");
         } else {
             Serial.println("Invalid speed. Please enter a value between 0 and 100.");
